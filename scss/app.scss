@@ -342,11 +342,18 @@ p{
 	opacity: 0.2;
 }
 
-.line{
+.vline{
 	height: 45px;
 	border-left: 1px solid $red;
 	position: absolute;
     margin: -10px 0px;
+}
+
+.hline{
+	width: 160px;
+	border-top: 1px solid $red;
+	position: absolute;
+    margin: 0 -10px;
 }
 
 .arrow {
