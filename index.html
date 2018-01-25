@@ -6,42 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esau A. Mena</title>
     <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
   </head>
   <body>
-    <section id="navbar">
-      <div class="row text-center">
-        <div class="column large-12  medium-6 small-3 text-center">
-          <ul class="ul_nav">
-            <li><a class="active" href="javascript:void(0)">Home</a></li>
-            <li><a href="javascript:void(0)">About</a></li>
-            <li><a href="javascript:void(0)">Resume</a></li>
-            <li><a href="javascript:void(0)">Races/Results</a></li>
-            <li><a href="javascript:void(0)">Social</a></li>
-            <li><a href="javascript:void(0)">Contact</a></li>
-          </ul>
-        </div>
-      </div>
+    <section>
+      <ul>
+        <li class="left-half">
+          <div class="name-intro p-left-120 p-top-30">
+            Esau A. Mena
+          </div>
+          <article>
+            <h1 class="developer">Web Developer</h1>
+          </article>
+        </li>
+        <li class="right-half">
+          <article>
+            <h1>Triathlete</h1>
+          </article>
+        </li>
+      </ul>
     </section>
-    <div class="content text-center">
-      <h1>New site coming up in the following days</h1>
-    </div>
-
-    
-    <script src="js/app.js"></script>
-    <script>
-      window.onscroll = function() {myFunction()};
-
-      var navbar = document.getElementById("navbar");
-      var sticky = navbar.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky")
-        } else {
-          navbar.classList.remove("sticky");
-        }
-      }
-    </script>
-
   </body>
 </html>

@@ -5,9 +5,9 @@
 @import 'motion-ui';
 
 @include foundation-global-styles;
-//@include foundation-grid;
-// @include foundation-flex-grid;
-@include foundation-xy-grid-classes;
+@include foundation-grid;
+@include foundation-flex-grid;
+//@include foundation-xy-grid-classes;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
@@ -59,8 +59,20 @@ body {
   font-size: 18px;
 }
 
+ul, li {
+  height: 100vh;
+}
+
+h1{
+  color: $white;
+}
+
+.developer{
+  font-family: $body-font-family-dev;  
+}
+
 .header {
-  background-color: #f1f1f1;
+  background-color: transparent;
   padding: 30px;
   text-align: center;
 }
@@ -68,13 +80,13 @@ body {
 #navbar {
   overflow: hidden;
   background-color: transparent;
-  display:none;
+  display:block;
 }
 
 #navbar a {
   float: left;
   display: block;
-  color: #000;
+  color: $white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -82,13 +94,13 @@ body {
 }
 
 #navbar a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: $light-blue;
+  color: $white;
 }
 
 #navbar a.active {
-  background-color: #4CAF50;
-  color: white;
+  background-color: $light-blue;
+  color: $white;
 }
 
 .content {
@@ -113,4 +125,76 @@ body {
 
 .center{
 	text-align: center;
+}
+
+.hero{
+  &__dark{
+    background-color: $dark-blue;
+    color: $white;
+  }
+  &__light{
+    background-color: $light-blue;
+    color: $white;
+  }
+}
+
+article {
+  position: relative;
+  top: 50%;
+  text-align: center;
+  transform: translate(0, -50%);
+  padding: 1rem;
+}
+
+/* Pattern styles */
+ul {
+  column-count: 2;
+  column-gap: 0;
+  margin-left: 0;
+}
+
+li{
+  list-style-type: none;
+}
+
+.left-half {
+  background-color: $dark-blue;
+  position: relative;
+}
+
+.right-half {
+  background-color: $light-blue;
+}
+
+.name-intro{
+  font-size: rem-calc(20px);
+  font-weight: 900;
+  color: $white;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.row:not(.full-width) { max-width: 1200px; } //set general container width
+//spacing utility classes
+@for $i from 1 through 20{
+  .p-top-#{$i * 10} {
+    padding-top: $i * 10px;
+    @media screen and (max-width: 39.9375em) { padding-top: $i * 5px; }
+  }
+  .p-bot-#{$i * 10} {
+    padding-bottom: $i * 10px;
+    @media screen and (max-width: 39.9375em) { padding-bottom: $i * 5px; }
+  }
+  .p-left-#{$i * 10} {
+    padding-left: $i * 10px;
+    @media screen and (max-width: 39.9375em) { padding-left: $i * 0px; }
+  }
+  .p-right-#{$i * 10} {
+    padding-right: $i * 10px;
+    @media screen and (max-width: 39.9375em) { padding-right: $i * 0px; }
+  }
+  .p-all-#{$i * 10}{
+    padding: $i * 10px;
+    @media screen and (max-width: 39.9375em) { padding: $i * 5px; }
+  }
 }

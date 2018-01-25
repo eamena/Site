@@ -78,11 +78,15 @@ $foundation-palette: (
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
+$dark-blue: #30385c;
+$light-blue: #54b7e1;
+$black: #000;
+$white: #fff;
 $body-background: $white;
+$body-background-dark: #1a1a1a;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Muli', sans-serif;
+$body-font-family-dev:'Share Tech Mono', monospace;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -138,7 +142,7 @@ $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 24),
+    'h1': ('font-size': 25),
     'h2': ('font-size': 20),
     'h3': ('font-size': 19),
     'h4': ('font-size': 18),
