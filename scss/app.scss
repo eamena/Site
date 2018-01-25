@@ -158,12 +158,14 @@ li{
 }
 
 .left-half {
-  background-color: $dark-blue;
+  // background-color: $dark-blue;
   position: relative;
+  background-image: url('../images/dev-landing.png');
 }
 
 .right-half {
-  background-color: $light-blue;
+  // background-color: $light-blue;
+  background-image: url('../images/tri-landing.png');
 }
 
 .name-intro{
