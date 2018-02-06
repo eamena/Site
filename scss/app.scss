@@ -161,7 +161,9 @@ h1{
 }
 
 .hero{
-  position: relative;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   margin-top: 51px;
 }
 
@@ -276,16 +278,29 @@ ul {
   }
 }
 
+.relative{
+  position: relative;
+}
+
 .first-name{
   opacity: 0.8;
   font-family: $body-font-family;
   font-size: 200px;
   font-weight: 900;
-  position: absolute;
-  top: -25px;
-  right: 160px;
+  top: -125px;
+  left: 170px;
   text-transform: uppercase;
   color: $white;
+
+  // @include breakpoint(large) {
+  //   font-size: 200px;
+  // }
+  // @include breakpoint(medium) {
+  //   font-size: 165px;
+  // }
+  // @include breakpoint(small) {
+  //   font-size: 60px;
+  // }
 }
 
 .last-name{
@@ -293,9 +308,8 @@ ul {
   font-family: $body-font-family;
   font-size: 200px;
   font-weight: 900;
-  position: absolute;
-  top: 170px;
-  right: 195px;
+  top: 65px;
+  left: 90px;
   text-transform: uppercase;
   color: $white;
 }
@@ -304,25 +318,30 @@ ul {
   font-size: 30px;
   letter-spacing: 7.5px;
   color: $white;
-  position: absolute;
-  top: 500px;
-  left: 80px;
+  top: 360px;
+  left: 100px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .line{
   border: solid 1px $white;
-  position: absolute;
-  top: 523px;
-  left: 390px;
-  width: 400px;
+  top: 380px;
+  left: 420px;
+  width: 200px;
 }
 
 .yo-hero{
   position: absolute;
-  top: -33px;
+  top: 15px;
   right: -375px;
   z-index:998;
+  width: 100%;
+  max-width: 822px;
+  height: auto;
+  @include breakpoint(medium) {
+    width: 763px;
+  }
 }
 
 .split {
@@ -358,13 +377,21 @@ ul {
 
 .dark-side{
   background-color: $black;
-  z-index:1;
+  // z-index:-1;
   position: relative;
 }
 
 .position{
   position: relative;
   display: flex;
+}
+
+.special{
+  position: relative;
+}
+
+.special-dos{
+  margin-left: -15px;
 }
 
 .rectangle{
@@ -374,7 +401,6 @@ ul {
   margin-top: 110px;
   position: absolute;
   margin-left: -55px;
-  z-index: -1;
 }
 
 .dev{
@@ -391,6 +417,12 @@ ul {
   &__download{
     font-size: rem-calc(18px);
     color:$light-blue;
+
+    a{
+      &:hover{
+        color: $light-blue;
+      }
+    }
   }
 
 }
@@ -458,8 +490,7 @@ ul {
 }
 
 .full-list{
-  font-size: rem-calc(11px);
-  color: #5a5a5a;
+  font-size: rem-calc(13px);
   color: #5a5a5a;
   font-family: $body-font-family-dev;
   display: block;
@@ -472,4 +503,28 @@ ul {
 
 .no-padding{
   padding: 0 0;
+}
+
+ .container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.container div {
+    height: 0;
+    position: absolute;
+}
+
+.elm1 {
+  top: 20%;
+  left: 5%;
+}
+
+.elm2 {
+  width: auto;
+  padding-bottom: 30%;
+  top: 17px;
+  right: -375px;
+  z-index:998;
 }
