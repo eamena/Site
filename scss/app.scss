@@ -61,14 +61,22 @@ body {
 
 ul, li {
   height: 100vh;
+  list-style-type: none;
+
+  .nav-item{
+    height: auto;
+  }
 }
 
 h1{
   color: $white;
 }
 
+
 .developer{
-  font-family: $body-font-family-dev;  
+  font-family: $body-font-family-dev;
+  text-transform: uppercase;
+  font-size: 30px;
 }
 
 .header {
@@ -78,9 +86,12 @@ h1{
 }
 
 #navbar {
-  overflow: hidden;
   background-color: transparent;
   display:block;
+  padding-left: 100px;
+  width: 100%;
+  background-color: $dark-blue;
+  z-index: 1;
 }
 
 #navbar a {
@@ -95,6 +106,28 @@ h1{
 
 #navbar a:hover {
   background-color: $light-blue;
+  color: $white;
+}
+
+#navbar-other {
+  background-color: transparent;
+  display:block;
+  padding-left: 100px;
+  width: 100%;
+}
+
+#navbar-other a {
+  float: left;
+  display: block;
+  color: $white;
+  text-align: center;
+  padding: 0 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar-other a:hover {
+  background-color: $dark-blue;
   color: $white;
 }
 
@@ -128,14 +161,12 @@ h1{
 }
 
 .hero{
-  &__dark{
-    background-color: $dark-blue;
-    color: $white;
-  }
-  &__light{
-    background-color: $light-blue;
-    color: $white;
-  }
+  position: relative;
+  margin-top: 51px;
+}
+
+.intro{
+  background-color: $dark-blue;
 }
 
 article {
@@ -153,19 +184,45 @@ ul {
   margin-left: 0;
 }
 
-li{
-  list-style-type: none;
-}
-
 .left-half {
-  // background-color: $dark-blue;
+  background-color: $dark-blue;
   position: relative;
-  background-image: url('../images/dev-landing.png');
+  //background-image: url('../images/dev-landing.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &:hover{
+    overflow: hidden;
+    background-image: url('../images/dev-landing.png');
+    text-decoration: underline;
+  }
 }
 
 .right-half {
-  // background-color: $light-blue;
-  background-image: url('../images/tri-landing.png');
+  background-color: $light-blue;
+  position: relative;
+  //background-image: url('../images/tri-landing.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &:hover{
+    overflow: hidden;
+    background-image: url('../images/tri-landing.png');
+    text-decoration: underline;
+  }
+}
+
+.triathlete{
+  font-family: Muli;
+  font-size: 30px;
+  letter-spacing: 7.5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.menu-developer-font{
+  font-family: $body-font-family-dev;
+  font-size: rem-calc(20px);
 }
 
 .name-intro{
@@ -174,6 +231,24 @@ li{
   color: $white;
   position: absolute;
   text-transform: uppercase;
+  transform: none;
+}
+
+.the-other-landing-page{
+  float: right;
+  padding-right: 100px;
+  position: fixed;
+
+  a{
+    colo: $white;
+    font-family: $body-font-family;
+    font-size: rem-calc(20px);
+    opacity: 0.5;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
 }
 
 .row:not(.full-width) { max-width: 1200px; } //set general container width
@@ -199,4 +274,202 @@ li{
     padding: $i * 10px;
     @media screen and (max-width: 39.9375em) { padding: $i * 5px; }
   }
+}
+
+.first-name{
+  opacity: 0.8;
+  font-family: $body-font-family;
+  font-size: 200px;
+  font-weight: 900;
+  position: absolute;
+  top: -25px;
+  right: 160px;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.last-name{
+  opacity: 0.8;
+  font-family: $body-font-family;
+  font-size: 200px;
+  font-weight: 900;
+  position: absolute;
+  top: 170px;
+  right: 195px;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.job{
+  font-size: 30px;
+  letter-spacing: 7.5px;
+  color: $white;
+  position: absolute;
+  top: 500px;
+  left: 80px;
+  text-transform: uppercase;
+}
+
+.line{
+  border: solid 1px $white;
+  position: absolute;
+  top: 523px;
+  left: 390px;
+  width: 400px;
+}
+
+.yo-hero{
+  position: absolute;
+  top: -33px;
+  right: -375px;
+  z-index:998;
+}
+
+.split {
+    height: 720px;
+    width: 70%;
+    position: relative;
+    // z-index: 1;
+    top: 0;
+    // overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    //left: 0;
+    background-color: $dark-blue;
+    overflow: visible;
+}
+
+.split2 {
+    height: 720px;
+    width: 30%;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.right {
+    right: 0;
+    background-color: $light-blue;
+}
+
+.dark-side{
+  background-color: $black;
+  z-index:1;
+  position: relative;
+}
+
+.position{
+  position: relative;
+  display: flex;
+}
+
+.rectangle{
+  width: 370px;
+  height: 562px;
+  border: solid 2px $light-blue;
+  margin-top: 110px;
+  position: absolute;
+  margin-left: -55px;
+  z-index: -1;
+}
+
+.dev{
+
+  &__title{
+    font-size: rem-calc(25px);
+    color:$light-blue;
+  }
+  &__bio{
+    font-size: rem-calc(18px);
+    text-align: left;
+    color: #d1d1d1;
+  }
+  &__download{
+    font-size: rem-calc(18px);
+    color:$light-blue;
+  }
+
+}
+
+.work-list{
+  font-size: rem-calc(29px);
+  letter-spacing: 4px;
+  color: $light-blue;
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+
+.project{
+  padding: 25px 0 0 ;
+
+  &__name{
+    font-family: Muli;
+    font-size: rem-calc(24px);
+    font-weight: bold;
+    color: #d2d2d2;
+    font-family: $body-font-family-dev;
+  }
+
+  &__link{
+    a{
+      font-size: rem-calc(18px);
+      font-weight: normal;
+      color: #5a5a5a;
+      font-family: $body-font-family-dev;
+      display: block;
+
+      &:hover{
+        color: $light-blue;
+      }
+    }
+  }
+}
+
+.contact-form{
+  background-color: $dark-blue;
+}
+
+.contact{
+
+  a{
+    font-family: $body-font-family-dev;
+    font-size: 25px;
+    letter-spacing: 4px;
+    color: $white;
+
+    &:hover{
+      color:$dark-blue;
+      text-transform: underline;
+    }
+  }
+
+  .button{
+    background-color: $light-blue;
+  }
+}
+
+.date{
+  color: $white;
+  font-size: rem-calc(10px);
+}
+
+.full-list{
+  font-size: rem-calc(11px);
+  color: #5a5a5a;
+  color: #5a5a5a;
+  font-family: $body-font-family-dev;
+  display: block;
+  text-transform: capitalize;
+}
+
+.no-margin{
+  margin: 0;
+}
+
+.no-padding{
+  padding: 0 0;
 }

@@ -1,0 +1,144 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esau A. Mena</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  </head>
+  <body>
+    <section class="position">
+      <div class="split left">
+        <div class="row">
+          <div class="column large-12 medium-12 small-12 menu-developer-font">
+            <div id="navbar">
+              <ul class="ul_nav">
+                <!-- <li><a class="active" href="#">Home</a></li> -->
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#resume">Resume</a></li>
+                <li class="nav-item"><a href="#work">Work</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="hero">
+            <div class="first-name">Esau</div>
+            <div class="last-name">Mena</div>
+            <div class="job developer">Web Developer</div>
+            <div class="line"></div>
+            <div class="yo-hero">
+              <img src="images/people-esaumena.png">
+            </div>
+
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="split2 right">
+        <div class="row">
+          <div class="column large-12">
+            <div id="navbar-other">
+              <div class="text-right">
+                <div class="text-right hero__light the-other-landing-page">
+                  <ul class="ul_nav">
+                    <li class="nav-item"><a href="triathlete.html">Triathlete</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="dark-side">
+        <div class="row">
+          <div class="column large-7">
+            <div class="rectangle"></div>
+            <img src="images/yo-dev.png">
+          </div>
+          <div class="column large-5 p-top-100">
+            <h1 class="developer dev__title">About Esau</h1>
+            <p class="developer dev__bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt, massa ut suscipit varius, erat ipsum vehicula massa, vulputate ullamcorper erat magna ac ligula. Donec ullamcorper convallis nulla, blandit hendrerit dui bibendum ut. Sed id volutpat mi. Aenean interdum vel erat sed iaculis. Suspendisse euismod lacus ut consectetur varius. Cras tincidunt eget ante ac varius. Donec facilisis sodales enim eget scelerisque. Fusce ut lobortis neque, quis rutrum velit. Proin volutpat pharetra ultrices. Nulla non consectetur lacus. Donec commodo convallis tortor non iaculis.</p>
+          </div>
+        </div>
+        <div id="work" class="row">
+          <div class="column large-4 medium-4 hide-small p-top-100">
+            <span class="developer work-list">Work <span class="full-list">(contact me for full list)</span></span>
+            <div class="project">
+              <span class="project__name">Sustain Solutions</span>
+              <span class="project__link"><a href="https://sustainsolutions.com">www.sustainsolutions.com</a></span>
+            </div>
+            <div class="project">
+              <span class="project__name">Value Drug Co.</span>
+              <span class="project__link"><a href="https://www.valuedrugco.com">www.valuedrugco.com</a></span>
+            </div>
+            <div class="project">
+              <span class="project__name">PlayWorld</span>
+              <span class="project__link"><a href="http://playworld.com/">www.playworld.com</a></span>
+            </div>
+            <div class="project">
+              <span class="project__name">UTEP, Computer Science Department</span>
+              <span class="project__link"><a href="http://cs.utep.edu">www.cs.utep.edu</a></span>
+            </div>
+            <div class="project">
+              <span class="project__name">UTEP, CAHSI</span>
+              <span class="project__link"><a href="http://cahsi.cs.utep.edu">www.cahsi.cs.utep.edu</a></span>
+            </div>
+            <div  id="resume" class="p-top-60 p-bot-50">
+              <p class="developer dev__download">Download Resume <i class="fas fa-download"></i></p>
+            </div>
+          </div>
+          <div class="column large-8 p-top-100">
+            <img src="images/temp.png">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div id="contact" class="contact-form">
+        <div class="row no-margin">
+          <div class="column large-5">
+            <img src="images/contact.png">
+          </div>
+          <div class="column large-7 text-center p-top-200">
+            <div class="contact">
+              <div class="button contact-button">
+                <a href="mailto:webmaster@example.com">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <footer>
+      <div class="contact-form">
+        <div class="row">
+          <div class="column large-12 text-center">
+            <span class="date">© 2017 Esau A. Mena</span>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+
+    <script src="js/app.js"></script>
+    <script>
+      window.onscroll = function() {myFunction()};
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+
+  </body>
+</html>
