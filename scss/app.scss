@@ -482,6 +482,14 @@ ul {
   .button{
     background-color: $light-blue;
   }
+
+  span{
+    letter-spacing: 4px;
+    font-size: 25px;
+    font-family: $body-font-family-dev;
+    text-transform: uppercase;
+    color: $white;
+  }
 }
 
 .date{
@@ -527,4 +535,33 @@ ul {
   top: 17px;
   right: -375px;
   z-index:998;
+}
+
+[type='text'], [type='email'], textarea,{
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-bottom: 2px solid $white;
+  font-family: $body-font-family-dev;
+  font-size: 18px;
+  color: $white;
+
+  &:focus {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid $white;
+    font-family: $body-font-family-dev;
+    font-size: 18px;
+    color: $white;
+  }
+}
+
+[type='submit'], [type='button']{
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  font-family: $body-font-family-dev;
+  font-size: 18px;
+  color: $white;
 }
