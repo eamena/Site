@@ -555,14 +555,31 @@ ul {
     font-size: 18px;
     color: $white;
   }
+
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $white;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $white;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $white;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $white;
+  }
 }
 
 [type='submit'], [type='button']{
   background: transparent;
-  border: none;
+  border: 1px solid $white;
   box-shadow: none;
   font-family: $body-font-family-dev;
   font-size: 18px;
   color: $white;
 }
 
+.back-img{
+  background: url('../images/contact.png');
+  background-repeat:no-repeat;
+}
