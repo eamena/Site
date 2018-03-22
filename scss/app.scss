@@ -292,15 +292,15 @@ ul {
   text-transform: uppercase;
   color: $white;
 
-  // @include breakpoint(large) {
-  //   font-size: 200px;
-  // }
-  // @include breakpoint(medium) {
-  //   font-size: 165px;
-  // }
-  // @include breakpoint(small) {
-  //   font-size: 60px;
-  // }
+   @include breakpoint(medium only) {
+    font-size: 150px;
+    left:135px;
+    top:-85px;
+  }
+
+  @include breakpoint(small only) {
+    font-size: 60px;
+  }
 }
 
 .last-name{
@@ -312,6 +312,13 @@ ul {
   left: 90px;
   text-transform: uppercase;
   color: $white;
+   @include breakpoint(medium only) {
+    font-size: 150px;
+  }
+
+  @include breakpoint(small only) {
+    font-size: 60px;
+  }
 }
 
 .job{
@@ -332,15 +339,8 @@ ul {
 }
 
 .yo-hero{
-  position: absolute;
-  top: 15px;
-  right: -375px;
-  z-index:998;
-  width: 100%;
-  max-width: 822px;
-  height: auto;
-  @include breakpoint(medium) {
-    width: 763px;
+  @include breakpoint(medium only) {
+    width: 82%;
   }
 }
 
@@ -515,8 +515,9 @@ ul {
 
  .container {
     width: 100%;
-    height: 100%;
+    height: 70%;
     position: absolute;
+    top: 60px;
 }
 
 .container div {
@@ -532,9 +533,20 @@ ul {
 .elm2 {
   width: auto;
   padding-bottom: 30%;
-  top: 17px;
+  top: -22px;
   right: -375px;
   z-index:998;
+
+   @include breakpoint(medium only) {
+    top: 207px;
+    right: -400px;
+    width: 100%;
+  }
+
+  @include breakpoint(small only) {
+    top: 182px;
+    right: -180px;
+  }
 }
 
 [type='text'], [type='email'], textarea,{

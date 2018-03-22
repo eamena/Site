@@ -16,7 +16,7 @@
         <div class="row">
           <div class="column large-12 medium-12 small-12 menu-developer-font">
             <div id="navbar">
-              <ul class="ul_nav">
+              <ul class="ul_nav hide-for-small-only">
                 <li class="nav-item"><a href="index.html">Home</a></li>
                 <li class="nav-item"><a href="#about">About</a></li>
                 <li class="nav-item"><a href="#resume">Resume</a></li>
@@ -32,7 +32,7 @@
                 <div class="line"></div>
               </div>
               <div class="elm2">
-                  <img src="images/people-esaumena.png">
+                  <img src="images/people-esaumena.png" class="yo-hero">
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@
         <div class="row">
           <div class="column large-12 medium-12 small-12">
             <div id="navbar-other">
-              <div class="text-right">
+              <div class="text-right hide-for-small-only">
                 <div class="text-right hero__light the-other-landing-page">
                   <ul class="ul_nav">
                     <li class="nav-item"><a href="triathlete.html">Triathlete</a></li>
@@ -76,19 +76,20 @@
         <div id="work" class="row">
           <div class="column large-4 medium-4 medium-offset-1 hide-for-small-only">
             <div class="project">
-              <span class="project__name">Sustain Solutions</span>
+
+              <button class="project__name" onclick="filterSelection('cars')">Sustain Solutions</button>
               <span class="project__link"><a href="https://sustainsolutions.com" target="__blank">www.sustainsolutions.com</a></span>
             </div>
             <div class="project">
-              <span class="project__name">PlayWorld</span>
+              <button class="project__name" onclick="filterSelection('animals')">PlayWorld</button>
               <span class="project__link"><a href="http://playworld.com/" target="__blank">www.playworld.com</a></span>
             </div>
             <div class="project">
-              <span class="project__name">UTEP, Computer Science Department</span>
+              <button class="project__name" onclick="filterSelection('fruits')">UTEP, Computer Science Department</button>
               <span class="project__link"><a href="http://cs.utep.edu" target="__blank">www.cs.utep.edu</a></span>
             </div>
             <div class="project">
-              <span class="project__name">UTEP, CAHSI</span>
+              <button class="project__name" onclick="filterSelection('colors')">UTEP, CAHSI</button>
               <span class="project__link"><a href="http://cahsi.cs.utep.edu" target="__blank">www.cahsi.cs.utep.edu</a></span>
             </div>
             <div  id="resume" class="p-top-60 p-bot-50">
@@ -96,7 +97,18 @@
             </div>
           </div>
           <div class="column large-7 p-top-50">
-            <img src="images/temp.png">
+            <div class="show-for-medium">
+              <div onclick="" class="filterDiv cars" ><img src="images/MacBook_&_iPhone-Sustain.png"></div>
+              <div onclick="" class="filterDiv animals" ><img src="images/MacBook_&_iPhone-Playworld.png"></div>
+              <div onclick="" class="filterDiv fruits" ><img src="images/MacBook_&_iPhone-UTEP.png"></div>
+              <div onclick="" class="filterDiv colors" ><img src="images/MacBook_& _iPhone-CAHSI.png"></div>
+            </div>
+            <div class="show-for-small-only">
+              <div onclick="" class="filterDiv cars" ><img src="images/MacBook-Sustain.png"></div>
+              <div onclick="" class="filterDiv animals" ><img src="images/MacBook-Playworld.png"></div>
+              <div onclick="" class="filterDiv fruits" ><img src="images/MacBook-UTEP.png"></div>
+              <div onclick="" class="filterDiv colors" ><img src="images/MacBook-CAHSI.png"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -155,6 +167,55 @@
           navbar.classList.remove("sticky");
         }
       }
+
+      filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+
+      // Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
     </script>
 
   </body>
