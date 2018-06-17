@@ -69,50 +69,79 @@
         </div>
         <div class="row">
           <div class="column large-12 medium-11 medium-offset-1 small-11 small-offset-1 p-top-100">
-            <span class="developer work-list">Work <span class="full-list">(contact me for full list)</span></span>
+            <span class="developer work-list">Work <span class="full-list">(<a href="#contact">contact me</a> for full list)</span></span>
           </div>
         </div>
-
+        <script>
+          function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+        </script>
         <div id="work" class="row">
-          <div class="column large-4 medium-4 medium-offset-1 hide-for-small-only">
+          <div class="column large-5 medium-5 medium-offset-1 hide-for-small-only">
             <div class="project">
+              <button class="project__name btn active">Sustain Solutions</button>
 
-              <button class="project__name" onclick="filterSelection('cars')">Sustain Solutions</button>
               <span class="project__link"><a href="https://sustainsolutions.com" target="__blank">www.sustainsolutions.com</a></span>
             </div>
             <div class="project">
-              <button class="project__name" onclick="filterSelection('animals')">PlayWorld</button>
+              <button class="project__name btn">PlayWorld</button>
               <span class="project__link"><a href="http://playworld.com/" target="__blank">www.playworld.com</a></span>
             </div>
             <div class="project">
-              <button class="project__name" onclick="filterSelection('fruits')">UTEP, Computer Science Department</button>
+              <button class="project__name btn">UTEP, Computer Science Department</button>
               <span class="project__link"><a href="http://cs.utep.edu" target="__blank">www.cs.utep.edu</a></span>
             </div>
             <div class="project">
-              <button class="project__name" onclick="filterSelection('colors')">UTEP, CAHSI</button>
+              <button class="project__name btn">UTEP, CAHSI</button>
               <span class="project__link"><a href="http://cahsi.cs.utep.edu" target="__blank">www.cahsi.cs.utep.edu</a></span>
             </div>
             <div  id="resume" class="p-top-60 p-bot-50">
               <p class="developer dev__download"><a href="#" target="__blank">Download Resume <i class="fas fa-download"></i></a></p>
             </div>
           </div>
-          <div class="column large-7 p-top-50">
+          <div class="column large-6 p-top-50">
             <div class="show-for-medium">
-              <div onclick="" class="filterDiv cars" ><img src="images/MacBook_&_iPhone-Sustain.png"></div>
-              <div onclick="" class="filterDiv animals hide" ><img src="images/MacBook_&_iPhone-Playworld.png"></div>
-              <div onclick="" class="filterDiv fruits hide" ><img src="images/MacBook_&_iPhone-UTEP.png"></div>
-              <div onclick="" class="filterDiv colors hide" ><img src="images/MacBook_& _iPhone-CAHSI.png"></div>
+              <div  class="work_img" style="display: block;"><img src="images/MacBook_&_iPhone-Sustain.png"></div>
+              <div  class="work_img" style="display: none;"><img src="images/MacBook_&_iPhone-Playworld.png"></div>
+              <div  class="work_img" style="display: none;"><img src="images/MacBook_&_iPhone-UTEP.png"></div>
+              <div  class="work_img" style="display: none;"><img src="images/MacBook_& _iPhone-CAHSI.png"></div>
             </div>
             <div class="show-for-small-only hide">
-              <div onclick="" class="filterDiv cars" ><img src="images/MacBook-Sustain.png"></div>
-              <div onclick="" class="filterDiv animals" ><img src="images/MacBook-Playworld.png"></div>
-              <div onclick="" class="filterDiv fruits" ><img src="images/MacBook-UTEP.png"></div>
-              <div onclick="" class="filterDiv colors" ><img src="images/MacBook-CAHSI.png"></div>
+              <div  class="work_img"><img src="images/MacBook-Sustain.png"></div>
+              <div  class="work_img"><img src="images/MacBook-Playworld.png"></div>
+              <div  class="work_img"><img src="images/MacBook-UTEP.png"></div>
+              <div  class="work_img"><img src="images/MacBook-CAHSI.png"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <script>
+      var btnContainer = document.getElementById("work");
+
+      // Get all buttons with class="btn" inside the container
+      var btns = btnContainer.getElementsByClassName("btn");
+
+      // Loop through the buttons and add the active class to the current/clicked button
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+      function myFunction() {
+        document.getElementsByClassName("work_img").style.display = "block";
+      }
+    </script>
+
+
     <section>
       <div id="contact" class="contact-form">
         <div class="row no-margin">
@@ -139,6 +168,9 @@
                 </div>
               </form>
             </div>
+            <div class="column large-12 medium-12 small-12">
+              <span class="date">© 2017 Esau A. Mena</span>
+            </div>
           </div>
         </div>
       </div>
@@ -154,69 +186,7 @@
     </footer> -->
 
     <script src="js/app.js"></script>
-    <script>
-      window.onscroll = function() {myFunction()};
 
-      var navbar = document.getElementById("navbar");
-      var sticky = navbar.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky")
-        } else {
-          navbar.classList.remove("sticky");
-        }
-      }
-
-      filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-
-      // Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
-}
-
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-    </script>
 
   </body>
 </html>

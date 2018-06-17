@@ -348,7 +348,7 @@ ul {
     height: 720px;
     width: 70%;
     position: relative;
-    // z-index: 1;
+    //z-index: 1;
     top: 0;
     // overflow-x: hidden;
     padding-top: 20px;
@@ -439,7 +439,7 @@ ul {
   padding: 25px 0 0 ;
 
   &__name{
-    font-family: Muli;
+    //font-family: Muli;
     font-size: rem-calc(24px);
     font-weight: bold;
     color: #d2d2d2;
@@ -461,6 +461,9 @@ ul {
   }
 }
 
+button.project__name.btn.active{
+  color: #54b7e1;
+}
 .contact-form{
   background-color: $dark-blue;
 }
@@ -594,4 +597,38 @@ ul {
 .back-img{
   background: url('../images/contact.png');
   background-repeat:no-repeat;
+}
+
+.back-img-tri{
+  background: url('../images/tri-bike.png');
+  background-repeat:no-repeat;
+}
+
+.partners{
+  background: url('../images/texture-hor.png');
+
+  .withe-back{
+    background-color: #fff;
+    margin: 70px 50px;
+    padding-bottom: 65px;
+    padding-top: 20px;
+  }
+
+  h1{
+    font-family: Muli;
+    font-size: 25px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 4px;
+    text-align: left;
+    color: #434343;
+    margin: 30px 55px;
+  }
+
+  img{
+    margin: auto;
+    display: block;
+  }
 }
