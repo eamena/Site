@@ -401,6 +401,11 @@ ul {
   margin-top: 110px;
   position: absolute;
   margin-left: -55px;
+
+  &__withback{
+    border: none;
+    background-image: url('../images/texture-vert.png');
+  }
 }
 
 .dev{
@@ -552,6 +557,25 @@ button.project__name.btn.active{
   }
 }
 
+.elm3 {
+  width: auto;
+  padding-bottom: 30%;
+  top: -25px;
+  right: -375px;
+  z-index:998;
+
+   @include breakpoint(medium only) {
+    top: 207px;
+    right: -400px;
+    width: 100%;
+  }
+
+  @include breakpoint(small only) {
+    top: 182px;
+    right: -180px;
+  }
+}
+
 [type='text'], [type='email'], textarea,{
   background: transparent;
   border: none;
@@ -630,5 +654,48 @@ button.project__name.btn.active{
   img{
     margin: auto;
     display: block;
+  }
+}
+
+.rectangle2{
+  width: 370px;
+  height: 562px;
+  margin-top: 110px;
+  position: absolute;
+  margin-left: -55px;
+  background-image: url('../images/texture-vert.png');
+}
+
+.tri__title{
+  font-family: Muli;
+    font-size: 25px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 4px;
+    text-align: left;
+    color: #434343;
+}
+
+.race{
+
+  &__name{
+    font-size: 24px;
+    font-weight: bold;
+    color: #54b7e1;
+    display: block;
+  }
+
+  &__description{
+    font-family: Muli;
+    font-size: 18px;
+    color: #5a5a5a;
+  }
+  &__date{
+    display: block;
+    font-family: Muli;
+    font-size: 18px;
+    color: #5a5a5a;
   }
 }
