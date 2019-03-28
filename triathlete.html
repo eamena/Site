@@ -142,7 +142,73 @@
                 </div>
               </div>
             </div>
-          </div>
+            <button onclick="showOldResults()">Older Results</button>
+            <div id="oldResults" class="row" style="display: none;">
+              <div class="column large-6 medium-12">
+                <div class="project">
+                  <span class="race__name">Mesa-PHX</span>
+                  <span class="race__description">Half-Marathon </span>|
+                  <span class="race__description">1:31:01 PR</span>
+                  <span class="race__date">February 24</span>
+                </div>
+                <div class="project">
+                  <span class="race__name">Park-to-Park</span>
+                  <span class="race__description">5k </span>|
+                  <span class="race__description">20:03 PR</span>
+                  <span class="race__date">April 22</span>
+                </div>
+                <div class="project">
+                  <span class="race__name">ST. George</span>
+                  <span class="race__description">70.3 </span>|
+                  <span class="race__description">5:28</span>
+                  <span class="race__date">May 5</span>
+                </div>
+                <div class="project">
+                  <span class="race__name">Dueces Wild</span>
+                  <span class="race__description">Oly Tri Relay, Cyling </span>|
+                  <span class="race__description">1:10</span>
+                  <span class="race__date">June 9</span>
+                </div>
+                <div class="project">
+                  <span class="race__name">Mountain Man 1</span>
+                  <span class="race__description">Olympic Tri </span>|
+                  <span class="race__description"></span>
+                  <span class="race__date">July 15</span>
+                </div>
+              </div>
+              <div class="column large-6 medium-12">
+                <div class="project">
+                  <span class="race__name">Mountain Man 2</span>
+                  <span class="race__description">Olympic Tri </span>|
+                  <span class="race__description">2:29</span>
+                  <span class="race__date">August 19</span>
+                </div>
+                <div class="project">
+                  <span class="race__name">Egle in The Sun</span>
+                  <span class="race__description">Sprint Tri </span>|
+                  <span class="race__description">1:01:41</span>
+                  <span class="race__date">September 2</span>
+                </div>
+                <div class="project">
+                  <span class="race__name">Life Time Tempe</span>
+                  <span class="race__description">Olympic Tri </span>|
+                  <span class="race__description">2:28:24</span>
+                  <span class="race__date">September 16</span>
+                </div>
+                <div class="project">
+                  <span class="race__name">Arizona, Tempe</span>
+                  <span class="race__description">70.3 </span>|
+                  <span class="race__description">5:03:12</span>
+                  <span class="race__date">October 21</span>
+                </div>
+                <div class="project">
+                  <span class="race__name">Indian Wells</span>
+                  <span class="race__description">70.3 </span>|
+                  <span class="race__description">4:58:26</span>
+                  <span class="race__date">December 9</span>
+                </div>
+              </div>
+            </div>
         </div>
     </section>
     <section style="margin-bottom: -12px;">
@@ -208,6 +274,17 @@
         </div>
       </div>
     </footer> -->
+
+    <script>
+      function showOldResults() {
+        var x = document.getElementById("oldResults");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/what-input/dist/what-input.js"></script>
