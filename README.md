@@ -3,5 +3,4 @@ It contains resume of professional life as well as results of triathlon and othe
 
 Created: 1/3/2018
 Designer: Joel Cook
-Developer: Esau A. Mena
-Content: Esau A. Mena
+Developer & Content: Esau A. Mena
